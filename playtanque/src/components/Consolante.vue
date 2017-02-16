@@ -1,15 +1,12 @@
 <template>
-  <div class="container">
-      <div class="jumbotron">
-          <h1>Bienvenue sur Playtanque</h1>
-          <p>Choisissez un type de concours, ajoutez vos joueurs et profitez !</p>
-      </div>
+  <div class="consolante">
+    <h1>Consolante</h1>
   </div>
 </template>
 
 <script>
     export default {
-        name: 'hello',
+        name: 'consolante',
         data () {
             return {
             }

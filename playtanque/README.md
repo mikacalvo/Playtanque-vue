@@ -24,3 +24,4 @@ Exemple simple de démarrage de projet vue avec webpack : https://github.com/vue
 
 Présentation vidéo de webpack : https://www.youtube.com/watch?v=WQue1AN93YU
 
+Projet démarré avec le tutoriel : http://www.flavienbeninca.fr/2016/06/15/vuejs-demarrer-avec-bootstrap.html
