@@ -14,7 +14,8 @@
                     <menuconcours></menuconcours>
                 </div>
             </nav>
-            <div>
+            <div class="row">
+                <sidebar></sidebar>
                 <router-view></router-view>
             </div>
         </div>
@@ -24,15 +25,27 @@
 <script>
     import Hello from './components/Hello'
     import Menuconcours from './components/Menuconcours'
+    import Sidebar from './components/Sidebar'
 
     export default {
         components: {
             Hello,
-            Menuconcours
+            Menuconcours,
+            Sidebar
         }
     }
 </script>
 
 <style lang="scss">
     @import 'src/assets/scss/design.scss';
+</style>
+
+<style scoped>
+    .navbar {
+        margin-bottom: 0;
+    }
+    .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
 </style>

@@ -3,7 +3,7 @@
 /* La je modifie la couleur principale */
 $brand-primary: #5a3966;
 
-$icon-font-path: "/node_modules/bootstrap-sass/assets/fonts/bootstrap/";
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 
 
 /* J'importe enfin le fichier de variables par défaut de bootstrap qui va permettre de définir les variables que je n'ai pas surchargées */
