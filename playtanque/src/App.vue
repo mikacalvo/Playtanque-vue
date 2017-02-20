@@ -16,7 +16,11 @@
             </nav>
             <div class="row">
                 <sidebar></sidebar>
-                <router-view></router-view>
+                <div class="container-fluid">
+                    <div class="side-body">
+                        <router-view></router-view>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -40,12 +44,29 @@
     @import 'src/assets/scss/design.scss';
 </style>
 
-<style scoped>
+<style>
     .navbar {
         margin-bottom: 0;
     }
     .row {
         margin-right: 0;
         margin-left: 0;
+    }
+    .side-body {
+        margin-left: 310px;
+    }
+    @media (max-width: 768px) {
+        /* Slide side body*/
+        .side-body {
+            margin-left: 5px;
+            margin-top: 70px;
+            position: relative;
+            -moz-animation: bodyslideout 300ms forwards;
+            -o-animation: bodyslideout 300ms forwards;
+            -webkit-animation: bodyslideout 300ms forwards;
+            animation: bodyslideout 300ms forwards;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
     }
 </style>

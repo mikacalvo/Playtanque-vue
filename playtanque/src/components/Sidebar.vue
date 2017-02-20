@@ -36,7 +36,7 @@
             </div>
 
             <div class="side-menu-container">
-                <ul class="nav navbar-nav" style="width: 100%">
+                <ul class="nav navbar-nav">
                     <li>
                         <form class="navbar-form" v-on:submit.prevent>
                             <div class="form-group">
@@ -87,9 +87,21 @@
             }
         }
     }
+
+    $(function () {
+        $('.navbar-toggle').click(function () {
+            $('.navbar-nav').toggleClass('slide-in')
+            $('.side-body').toggleClass('body-slide-in')
+            $('#search').removeClass('in').addClass('collapse').slideUp(200)
+        })
+        $('#search-trigger').click(function () {
+            $('.navbar-nav').removeClass('slide-in')
+            $('.side-body').removeClass('body-slide-in')
+        })
+    })
 </script>
 
-<style scoped>
+<style>
     .side-menu {
         position: fixed;
         width: 300px;
@@ -216,9 +228,6 @@
         border-radius: 0;
         background-color: #f3f3f3;
         padding: 15px 18px;
-    }
-    .side-body {
-        margin-left: 310px;
     }
     @media (max-width: 768px) {
         .side-menu {
@@ -349,18 +358,6 @@
             100% {
                 left: 0;
             }
-        }
-        /* Slide side body*/
-        .side-body {
-            margin-left: 5px;
-            margin-top: 70px;
-            position: relative;
-            -moz-animation: bodyslideout 300ms forwards;
-            -o-animation: bodyslideout 300ms forwards;
-            -webkit-animation: bodyslideout 300ms forwards;
-            animation: bodyslideout 300ms forwards;
-            -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
         }
         .body-slide-in {
             -moz-animation: bodyslidein 300ms forwards;

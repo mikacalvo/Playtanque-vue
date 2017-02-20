@@ -2,23 +2,12 @@
     <header class="header" id="header">
         <nav>
             <a href="/" class="navbar-brand">Playtanque</a>
-            <v-link href="/consolante">Consolante</v-link>
-            <v-link href="/melee">Mêlée</v-link>
-            <v-link href="/points">Points</v-link>
+            <router-link to="/consolante">Consolante</router-link>
+            <router-link to="/melee">Mêlée</router-link>
+            <router-link to="/points">Points</router-link>
         </nav>
     </header>
 </template>
-
-<script>
-    import VLink from '../components/VLink.vue'
-
-    export default {
-        name: 'menuconcours',
-        components: {
-            VLink
-        }
-    }
-</script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
@@ -57,5 +46,9 @@
 
     header nav a:last-child {
         border-radius:0 2px 2px 0;
+    }
+
+    .router-link-active {
+        background-color:#e35885;
     }
 </style>
